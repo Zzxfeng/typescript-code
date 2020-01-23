@@ -17,7 +17,7 @@ function error(message: string): never {
 }
 
 // 推断的返回值类型为never
-function fail() {
+function fail():never {
     return error("Something failed");
 }
 
@@ -30,4 +30,4 @@ let obj: object = {name:'bob'} //除number，string，boolean，symbol，null或
 let obj1: object = [12,8,'h'] //除number，string，boolean，symbol，null或undefined之外的类型
 let obj2: object = function(){//除number，string，boolean，symbol，null或undefined之外的类型
     console.log('函数也是对象类型哦...')
-} 
+}
